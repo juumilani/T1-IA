@@ -21,9 +21,9 @@ def sudoku_pronto(tabuleiro):
 		if lugar_possivel(tabuleiro, lin, col, num):
 			tabuleiro[lin][col] = num
 			printa_tabuleiro(tabuleiro)
-			time.sleep(0.5)
+			time.sleep(0.2)
 			os.system('clear')
-			# chamada recursiva para testar o próximo numero
+			#chamada recursiva para testar o próximo numero
 			if (sudoku_pronto(tabuleiro)):
 				return True
 
@@ -31,7 +31,7 @@ def sudoku_pronto(tabuleiro):
 			tabuleiro[lin][col] = 0
 			print("Backtracking!")
 			printa_tabuleiro(tabuleiro)
-			time.sleep(0.5)
+			time.sleep(0.2)
 			os.system('clear')
 
 	return False
