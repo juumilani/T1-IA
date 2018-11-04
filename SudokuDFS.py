@@ -1,6 +1,6 @@
 
-# TO-DO: mostrar as iterações e um jeito mais bonito de inserir os números no tabuleiro
-
+import os
+import time
 
 # método recursivo que checa se o tabuleiro está completamente pronto ou não
 def sudoku_pronto(tabuleiro):
@@ -20,12 +20,19 @@ def sudoku_pronto(tabuleiro):
 		# se houver um lugar possivel, ele coloca o numero 
 		if lugar_possivel(tabuleiro, lin, col, num):
 			tabuleiro[lin][col] = num
+			printa_tabuleiro(tabuleiro)
+			time.sleep(0.5)
+			os.system('clear')
 			# chamada recursiva para testar o próximo numero
 			if (sudoku_pronto(tabuleiro)):
 				return True
 
 			# caso o número falhe ele apaga o número da posição para o backtracking
 			tabuleiro[lin][col] = 0
+			print("Backtracking!")
+			printa_tabuleiro(tabuleiro)
+			time.sleep(0.5)
+			os.system('clear')
 
 	return False
 
