@@ -44,7 +44,7 @@ def lugar_possivel(tabuleiro, lin, col, num):
 	return resultado
 
 # esse método está procurando lugares vazios no tabuleiro de sudoku, caso encontre
-# "disponivel" guarda as coordenadas desse lugar no tabuleiro e o método retorna true
+# "disponivel" guarda as coordenadas desse lugar no tabuleiro e o método retorna -1
 def lugar_disponivel(tabuleiro, lin, col):
 	for lin_aux in range(lin, 9):
 		for col_aux in range(col, 9):
